@@ -11,7 +11,7 @@ def just_merged_pull_requests(response):
        for x in response
        if x['merged_at']]
 
-def filter_where_two_frome_same_user(response):
+def filter_where_two_from_same_user(response):
     users_to_count = collections.defaultdict(int)
     for x in response:
         users_to_count[x['user']['login']] += 1
@@ -24,7 +24,7 @@ def main():
     found_people_to_add = False
 
     r = get_data()
-    people = filter_where_two_frome_same_user(
+    people = filter_where_two_from_same_user(
         just_merged_pull_requests(r))
     for person in people:
         if person not in users_already_added:
