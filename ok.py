@@ -18,7 +18,18 @@ def filter_where_two_from_same_user(response):
     return [user for user in users_to_count
             if users_to_count[user] >= 2]
 
-users_already_added = set(['willingc'])
+users_already_added = set([
+    'eeshangarg',
+    'sunu',
+    'onceuponatimeforever',
+    'shaunagm',
+    'cpallares',
+    'natea',
+    'brittag',
+    'Aaron1011',
+    'pythonian4000',
+    'willingc',
+])
 
 def main():
     found_people_to_add = False
