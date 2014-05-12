@@ -1,10 +1,12 @@
 import requests
 import collections
+import urllib2
+import json
 
 
 def get_data():
-    r = requests.get('https://api.github.com/repos/openhatch/oh-mainline/pulls?state=all&per_page=100')
-    return r.json()
+    r = urllib2.urlopen('https://api.github.com/repos/openhatch/oh-mainline/pulls?state=all&per_page=100').read()
+    return json.loads(r)
 
 def just_merged_pull_requests(response):
     return [x
