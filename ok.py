@@ -1,4 +1,3 @@
-import requests
 import collections
 import urllib2
 import json
