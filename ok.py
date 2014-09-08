@@ -32,6 +32,7 @@ users_already_added = set([
     'willingc',
     'younjin',
     'ehashman',
+    'paulproteus',
 ])
 
 def main():
